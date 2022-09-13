@@ -23,6 +23,11 @@ pipeline {
                 sh 'go test'
             }
             }
+        }  
+    }
+    post {
+        success{
+            archiveArtifacts artifacts: 'frontend/frontend, backend/backend', followSymlinks: false
         }
     }
 }
