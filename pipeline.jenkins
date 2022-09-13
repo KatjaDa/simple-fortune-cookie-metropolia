@@ -1,9 +1,17 @@
 pipeline {
     agent any
     stages {
-        stage('Build'){
+        stage('Build Frontend'){
             steps {
-                echo 'hello build'
+                dir('frontend'){
+                    sh 'go build'
+                }
+               
+            }
+        }
+        stage('Build backend'){
+            dir('backend'){
+                sh 'go build'
             }
         }
     }
