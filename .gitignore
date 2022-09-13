@@ -6,3 +6,5 @@ frontend/frontend
 
 #VM dev env
 .vagrant
+
+docker-katas

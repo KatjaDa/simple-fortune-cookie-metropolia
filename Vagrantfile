@@ -81,5 +81,7 @@ Vagrant.configure("2") do |config|
      curl -SL https://github.com/docker/compose/releases/download/v2.3.3/docker-compose-linux-x86_64 -o /home/vagrant/.docker/cli-plugins/docker-compose
      chmod +x /home/vagrant/.docker/cli-plugins/docker-compose
      ln -s /home/vagrant/.docker/cli-plugins/docker-compose /usr/local/bin/docker-compose
+     #install golang for our application
+     apt-get install -y golang-go
   SHELL
 end
