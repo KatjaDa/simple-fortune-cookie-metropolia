@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout scm') {
-            steps {
-               git branch: 'main', changelog: false, poll: false, url: 'https://github.com/eficode-academy/simple-fortune-cookie-metropolia.git'
-            }
-        }
         stage('Build'){
             steps {
                 echo 'hello build'
