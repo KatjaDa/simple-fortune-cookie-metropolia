@@ -10,8 +10,10 @@ pipeline {
             }
         }
         stage('Build backend'){
-            dir('backend'){
+            steps{
+                dir('backend'){
                 sh 'go build'
+            }
             }
         }
     }
